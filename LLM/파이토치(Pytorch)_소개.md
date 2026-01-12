@@ -77,6 +77,45 @@ pip install numpy
 
 
 
+## A.3 모델을 계산 그래프로 보기
+
+
+
+Autograde: 파이토치의 자동 미분 엔진
+
+계산 그래프:
+
+- 유향 그래프(directed graph)
+- 신경망의 출력을 계산하기 위한 일련의 계산
+- 역전파(back propagation)를 위해 그레이디언트 계산하려면 필요
+
+
+
+## A.4 자동 미분을 손쉽게
+
+
+
+역전파: 신경망을 위한 미분의 연쇄 법칙(chain rule)을 구현한 것
+
+그레이디언트(gradient): 1개 이상의 변수를 입력으로 받는 다변수 함수(multivariate function)의 모든 편도 함수를 담고 있는 벡터
+
+
+
+역전파(backpropagation)
+
+- 후진 모드 자동 미분(reverse-mode automatic differentiation)
+
+- 계산 그래프에서 손실 그레이디언트를 계산하는 가장 일반적인 방법
+  => 오른쪽에서 왼쪽으로 연쇄 법칙을 적용
+
+
+
+고수준 연쇄 법칙이 계산 그래프에 있는 모델 파라미터에 대해 손실 그레이디언트를 계산하는 방법
+
+
+
+
+
 
 
 
