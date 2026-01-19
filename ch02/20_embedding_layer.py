@@ -21,25 +21,27 @@ print("토큰 ID:\n", inputs)
 print("\n입력 크기:\n", inputs.shape)
 
 token_embeddings = token_embedding_layer(inputs)
-print(token_embeddings.shape)
+print("\n토큰 임베딩 크기:\n", token_embeddings.shape)
 
 # 임베딩 벡터의 값을 확인합니다.
-print(token_embeddings)
+print("\n토큰 임베딩 벡터의 값:\n",token_embeddings)
 
 context_length = max_length
+# context_length = 4
+# output_dim: 256
 pos_embedding_layer = torch.nn.Embedding(context_length, output_dim)
 
 # 임베딩 층의 가중치를 확인합니다.
-print(pos_embedding_layer.weight)
+print("\n위치 임베딩 층의 가중치:\n", pos_embedding_layer.weight)
 
 pos_embeddings = pos_embedding_layer(torch.arange(max_length))
 print(pos_embeddings.shape)
 
 # 위치 임베딩 값을 확인합니다.
-print(pos_embeddings)
+print("\n위치 임베딩 값:\n", pos_embeddings)
 
 input_embeddings = token_embeddings + pos_embeddings
-print(input_embeddings.shape)
+print("\n입력 임베딩의 크기:\n", input_embeddings.shape)
 
 # 입력 임베딩 값을 확인합니다.
-print(input_embeddings)
+print("\n입력 임베딩:\n",input_embeddings)
